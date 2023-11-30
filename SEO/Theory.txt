@@ -1,0 +1,588 @@
+sSEO Fundamentals
+
+Two sub categories of SEO
+Off Page: Niche of website, outside links pointing to website, qualtity content, etc.
+On-page: Aspects that can be implemented directly by you.
+
+---On page SEO---
+1. Title: Try and put keywords in title, make title catchy and easy to read, Keep title tags between 50 to 60 char in length.
+<title> </title>
+
+2.Description: should be unique and contain keyword and should be under 156 char in length.
+<meta name='description' content="Actual description here">
+
+3.URL:url needs to explain what is the website about, it needs to be easy to understand and tell search engines and  humans what the page is about. URL should be under 115 characters but shorter the better.
+
+Example: 
+https://johndoesblog.com/blog/fdsafdsaf (bad)
+https://johndoesblog.com/blog/article-title (good)
+
+4.Other Meta tags:meta keywords attribute- a series of keywords you deem relevant to the page in question.
+<meta name="keywords" content="put, keywords, here, with, common, seperate">
+
+meta viewport- gives the browser instructions on how to control the page dimensions and scaling.
+<meta name="viewport" content= "width=device-width, intiatial-scale =1.0">
+
+meta charset- defines a chracter set 
+
+meta author -defines the author of a page
+<meta name="author" content="John Doe">
+
+5.Favicon
+Improves user experience.
+Easier to find website by icons 
+remember to name it favicon icons
+<link rel="shortcut icon" type="image/ico" href="./favicon.ico"/>
+
+6.Images
+must compress it. the website must be fast.
+remember to add width and height of image for layout
+name the pic appropriately
+
+7.Attributes
+Alt tags hlp search engines determine what the picture is about.
+<img alt=""/>
+add title tags 
+<a href="https://google.com" title="Google">Google</a>
+
+8.Mobile friendly
+media queries in css files 
+
+9. minify and compress
+can help save off time loading website.
+
+10. Keyword usage
+keyword should appear in title meat description and headings.
+Also placing keyword in headings, subheading and try and squeeze it into opening paragraphs
+
+11. Add Internal links
+add links that makes sense
+
+12. Improve Readability (Use hemingway editor grade 6 and below)
+- Write in short sentences and short paragraphs.
+- Use descriptive sub headings so people can easily find what they looking for when skimming.
+- Use large enough font easily to read on desktop and mobile.
+- avoid using big words
+- write as you speak
+
+13. Other optimizations:
+-Open graph(OG) meta tags
+-Schema markup
+
+----Link Building -----
+Get backlinks!!!
+Link Building is the process of buidling relationships with other relevant site owners who want and will link to your content because it enhances theirs.
+Strategies:
+1. Create them- add backlinks on directories, blog comments and social media profile. Easy but ineffective.
+2. Buy them - can be banned.
+3. Earn them - 
+  3.1 Through email outreach.
+  3.2 Becoming a source for online publication or media outlet
+  3.3 Earn back links organically
+
+Backlinks can improve or harm your ranks.
+
+Quality links contain:
+1. Relevance to topic.
+2. Authority
+3. Achor text
+4. Rel Attribute
+5. Link Placement
+
+i.e. The ideal link would come from a relevant and authorittive page where the link is followed. It would have a descriptive anchor and be placed contextually within editorial content.
+
+link rel Attribute: 
+nofollow = google will not transfer authoritity throuth these links.
+UGC = User generated content.  may past authortive if seem relevant.
+Sponsored= may past authoritity if seem relevant.
+
+*Default will be 'followed link'
+
+---Link Building Tactics ---
+3 general stages in link building:
+1. Prospecting
+2. Vetting
+3. Email Outreach
+
+Link building- The process of building relationships with other relevant site owners who want and will link to your content because it enhances theirs.
+
+Tactics:
+1. Get free PR using HARO - help a reporting
+2. Guest Blogging - find website with may authors.
+3. Skyscraper technique - write a blog on the same topic as one with many links and then forward to those links to link to yours.
+
+Outreach email:
+sniper approach
+
+Anatomy of an outreach email:
+1. Subject line: Get them to open the email. Don't clickBait.Briefly and ccurately describe the purpose of your email. and evoke curiosity.
+2. Introduction: Tell them why you are email and get them to read the rest. Value proposition.
+3.Qualification and justification: Why you over 100 others. Good reason why they should consider
+4.The pitch: what is the value exchange.
+5.Continue conversation: Open ended the email.
+
+-----TECHNICAL SEO -----
+1. NoIndex meta tag: <meta name="robots" content="noindex"> 
+doesn't index pages. Only add if won't bring extra value.
+2. robots.txt: Should be on your root domain. 
+can have multiple robots.txt for sub domains.
+robots.txt directives:
+User-agent : Defines the crawler that the rule applies to
+Disallow: Instructs user agents not to crawl specific pages or directories
+3. Sitemaps: is a list the imporatnat URLS on your website. can be pages, images, videos, and other files.
+can add sitemap directives in your robots.txt file.
+Sitemap: https://yourdomain.com/sitemap.xml4 
+and you can add it in your google search console
+4. Redirects: a redirect takes visitors and bots from one URL to Another. 
+5. Canonical tag:
+<link rel="canonical" href="https://yourdomain/slug"/>
+the purpose os to tell search engines what the preferred URL is for a page. Solves duplicate content issues.
+google may ignore your tag.
+
+Best Technical SEO Practices
+1. Ensure that your site structure follows a logical hierarchy
+2. Ensure your pages don't load slow
+-Cache your website content.
+-Compress images.
+3. Do your best to stay on top of around 50 potential seo errors. Run schedule audits on your site 
+
+----------TECHNICAL SEO FOR DEVELOPERS----------
+
+-----1. User experience-----
+
+1.1 Core Web Vitals
+-Core pass mark works on the 75% percentile  so more than 3/4
+-Device types are measure seperately. However, google works on the mobile first as indexing.
+
+1.1.1 Largest Contentful Paint(LCP)- Largest thing loaded
+-Visual load
+-Is the largest element loaded in the viewport
+-Recommended target LCP load within 2 (good) to 4 Needs improvement sec.
+-check at the bottom to see what is the LCP element.
+-4 most common causes:
+ 1. Slow server responses
+ 2. Render-blocking javascript and css
+ 3. Slow resource load times
+ 4. Client-side rendering
+
+-Trouble shoot we can use the:
+1. Slow servers
+-Minimize server logic
+-Always be cahcing pages than rebuilding them
+-Ensure all is cahched as long as practical
+2. Slow Network
+- Use CDN
+- use service workers (Workbox app)
+3. Slow Code
+- Reduce what is loaded above the fold
+- Put code inline put the JS CSS in the header. So it doesn't have to request, download, parse and then render it.
+- Use defer and async.
+-Use prefetch and preconnect.
+-preload. 
+<link rel="preload" href="style.css" as="style">
+<link rel="preload" href="main.js" as="script">
+<link rel="preload" href="hi.png" as "image">
+<link rel="preload" href="ehlo.mp4" as "video">
+<link rel="preload" href="cool.woff2" as "font" type="font/woff2">
+-images: compress, use attribute load=lazyload, use modern format.
+
+
+-Optimizing the rendering process:
+ Images
+ 1. Lazyload
+ 2. Compress
+ 3. Preloading (Tells browsers what you want to load first)
+
+ *If you don't use image CDN must save multiple copies at different resolutions.
+ <img src="small.jpg" srcset="small.jpg 500w, medium.jpg 1000w, large.jpg 1500w" alt="…">
+
+ Preload tag informs browser about critical resource asap before their are discovered by HTML.
+<link rel="preload" as="image" href="important.png">
+
+Repsonsive images + Preload
+In header: 
+<link rel="preload" as="image" href="wolf.jpg" imagesrcset="wolf_400px.jpg 400w, wolf_800px.jpg 800w, wolf_1600px.jpg 1600w" imagesizes="50vw">
+In body:
+<img src="wolf.jpg" srcset="wolf_400px.jpg 400w, wolf_800px.jpg 800w, wolf_1600px.jpg 1600w" sizes="50vw" alt="A rad wolf">
+
+Preloading background images using image-set:
+*can set in CSS
+background-image: image-set( "cat.png" 1x, "cat-2x.png" 2x);
+<link rel="preload" as="image" imagesrcset="cat.png 1x, cat-2x.png 2x">
+
+Preconnect to required origins
+<link rel="preconnect">
+Preconnect or dns-prefetch
+<link rel="preconnect" href="https://example.com">
+*be careful as if you do not use the connection within 10 seconds the connection is severed and it is wasted resources.
+
+<link rel="preload"> *for general use
+<link rel="preconnect"> *for edge causes
+
+<link rel="dns-prefetch"> this handles dnslookup 
+<link rel="dns-prefetch" href="https://example.com" />.
+
+
+
+ CSS
+ 1. Minification
+ 2. inline your critical CSS for above the fold content.
+  ->Website font
+  ->ViewPort settings
+  ->Background color
+  ->H1 style
+ 3. Remove unused CSS (Devtool command) and defer non-critical CSS
+
+ JS 
+ 1. Minify (But check it doesn't break)
+ 2. Remove non-critical JS
+ 3. Defer or asynchronously load JS
+  -> <script defer src="js" </script> *all non critical js
+  -> <script async src="js" </script> *for content needed earlier in page
+
+1.1.2 First Input Delay (FID)- Time from load to being interactive.
+-Interactivity
+-Recommended speed for FID is Less than 100ms good then needs improvement from 100ms to 300ms
+
+Types of interactions:
+-Clicking a link or a button
+-Inputting text into a blank friend
+-Selecting a drop-down menu
+
+Common cause for long FID is heavy javascript usage.
+FID Optimisation:
+1. Break up long tasks
+2. Optimize your page for interaction readiness
+3. USe a web worker
+4. Reduce Javascript execution time
+
+Defer, delay or delete JS
+General any JS bigger than 200kB is too large.
+USe Code splitter.
+Defer : <script defer src="does-not-change-layout.js></script>, tells the browser that the code won't affect the layout of the page and can be loaded at the end.
+Async: <script async src="async-javascript.js"></script>, pretty much tells the browser to run script but without blocking any other script on the browser.
+Delete or exclude any software which isn't needed for page.
+See if any heavy components like UI code.
+Break up loing task as the browser will first download the whole file and then execute it. a long task is anything that takes longer than 15 millisec to complete.
+Can use timeout 
+
+1.1.3 Cumulative Layout Shift (CLS) - How much does the page shift around while loading.
+-Visual stability
+-Recommended CLS is 0.1(good) to 0.25(needs improvement)
+-CLS is measured throughtout the user experience until the user exits and the largest number is provided.
+-user interaction is given a 500 ms grace period to move things around.
+-CLS session is started when something moves then if somethings move within 1sec the layout is combined and the session ends after 5 seconds.
+-any out of the viewport doesn't count
+-font-display: optional css rule will attempt to load font but after 3 sec stop and use the default.
+
+- Most common causes of CLS
+ 1. Images without dimensions
+ 2. Ads,embeds and iframes without dimensions
+ 3. Dynamically injected content
+ 4. Fonts or styles applied too late in the code
+
+Images:
+  -Add Height and width Attributes or use CSS aspect ratio boxes
+For ads, embeds and iframes:
+  -Define height and width attributes for element 
+  -use aspect ratio for responsive design combine with giving a height and width.
+  -give iframes and embeds a oversize height and width attribute with overflow:hidden to prevent mismatches.
+  -also check if the iframe attribute is set so even if the embed is not loaded then you don't get a shift.
+
+1.2 Optimise Images
+*Affects LCP
+-Responsive images for different screen sizes
+-Use most modern format for the browsers can user (webp and avif)
+- Use lowest resolutions as possible for screen sizesrcset = " small-image.png 300w, medium-image.png 600w, large-image.png 1200w"
+-Lazyload offscreen images always
+-set height and width for images *CLS 
+-compress image lossly if quality is not important and lossless if quality is important.
+*Use a tool to optimise images.
+
+1.3 Accessbility
+- Alt text on images
+- semantics elements
+
+1.4 Mobile responsiveness
+-Mobile First
+- Viewport meta tag: <meta name="viewport" content="width=device-width, initial-scale=1" />
+-readability font for all devices
+
+1.5 Reduce Javascript as far as possible
+-check bundler pack size 
+-check pixels and tracker tag
+-do not require JS for critical functionality
+-Prerender aka server side rednering website
+
+1.6 Clean URL structure
+-USe short, descriptive , keyword URL
+
+-----2. Meta Data-----
+
+2.1 Title and Description
+<title> </title>
+<meta name="description" content=" seo description"/>
+must must be unqie for each page and post.
+
+2.2 XML Sitemap
+
+2.3 Structure Data
+schema.org 
+
+2.4 Canonical tags
+Duplicate pages so tell google which page is the main one.
+<html>
+<head>
+<title> Explore the world of dresse </title>
+<link rel=:"canonical" href="https://example.om/dreeses/green-dresses"/>
+<!-- other elements -->
+</head>
+<!-- rest of the HTML-->
+***Ensure Canoncial tags is linked to the HTTPS version
+
+2.5 Open Graph Meta tags
+indirectly helps SEO
+Social media meta data 
+for backlinks...
+
+-----3. Admin-----
+
+3.1 SSL Certificate
+letsusencrypt.org
+
+3.2 Manage Redirects
+
+3.3 Useful 404 page
+
+3.4 Have Robots.txt 
+
+User-agent: Googlebot
+Disallow: /noggoglebot/
+
+User-agent: *
+Allow: /
+
+Sitemap: https://www.example.com/sitemap.xml
+
+3.5 Site audits
+Core vitals - Lighthouse
+Google search console
+
+-------------------SEO Technical Auditing -------------------------
+
+1. Check URL redirect
+- check HTTP and https
+- check with and without the WWW.
+
+type site:centralparktutos.com inurl:www *should have no resolutions
+type site:centralparktutos.com -inurl: https *should have no resolutions.
+type site:centralparktutos.com inurl: https *should have no resolutions.
+
+Tools for Audit:
+Google analytics
+Google search console
+Pagespeed insights
+Google data structure tool
+AHREF Tools
+Copyscrape
+SERP simulator
+Web page ord counter
+use mobile friendly checker
+
+1. Check that all version goes to the same page. Check conanical 
+Check if the  webpage redicect to HTTPS vesion if http,http://www, https://www .
+
+2. Crawl the site
+ Use Aref Site Audit.
+ 2.1. Check HTML errors
+ 2.2. Content Quality report to check if duplicate content on own website. To check internet, copy website url into Copyscape.
+ 2.3. Low word count problem
+
+3. Check if site is index by Google
+type in google searchbar "site:websitename.com"
+check number page results equal to the amount of pages that is on the website.
+if you don't know how many pages on your website go to ahref audit and check the internal pages.
+
+4. Check if site is ranking for its keyword
+Type site name with keyword and check if it is ranking
+
+5. Check some on page SEO on main/important(most visited) pages
+
+R-click => view page source.
+
+5.1 Check title tag
+-copy title into serp simulator(serpsim) to check length
+-copy keywords into Ahref keywords explorer
+
+5.2 Check meta description
+-copy into serp simulator to check length.
+
+5.3 Check H1
+-Check if there is only one
+-Keywords is sprinkled in.
+
+6. Check site speed 
+Can use Google Pagespeed insights, GTMatrix 
+In Ahref siteaudit under performance.
+
+7. Check Structure data issues
+Use google Data Testing Tools
+
+8. Organic traffic analysis
+-use google analytics => check acquisition tab => Click overview => check organic search? set past 30 days
+-then check landing pages for which pages brings in the most visit
+use the last 12 months for a trend.
+
+9. Backlink page analysis
+-Check ahref audit refering domains backlinks report if it is going up.
+-Check ahref audit refering domains if any dodgy looking pages are linking to mine.
+-check if any backlinks are linking to 404 pages
+-Check broken outbound links
+
+10. Content gap analysis
+put competitor name in for checking keywords
+
+-----------------------WORDPRESS SEO Optimisation------------------
+
+1. Theme must be mobile responsive
+2. Avoid themes that are bloated with plugins or third party scripts
+3. www or no www - use which one has the higer Authority. New site it doesn't matter.
+4. Setup permalinks- Prefer post name *keep te name clean and short
+5. Use Yoast SEO plugins
+-5.1. setup sitemap however only select pages you want google to crawl
+6. On page SEO
+- 6.1. Title
+- 6.2. URL
+- 6.3. body
+- 6.4. Meta tags
+
+-------------------------Ecommerce-----------------------------
+-----Images-----
+- use source tag to provide the correct size image for device. hgt and width.
+- use best format i.e. webp...however some browser don't support certain format then you can dynamically provide most efficient format for browser.
+- The formats does change qualtity like Lossy(tradeoff between quality and size)while loseless only compress as far as quality remains.
+- Use compression on all images
+-Quality factor 0.75 is commonly used.
+-good cache policy for images
+-Use CDN
+-Correctly sequencing images: 
+1. Large hero image above the fold, 
+2. all smaller images above the fold, 
+3. images just off screen so when scrolling happends,
+4. lazy load everything else.
+* <img loading="lazy"...
+
+HTTP2 
+Push images to webssite that will be needed.
+
+-----Javascript -----
+Tip 1: Avoid JS file proliferation
+Avoid having too many JS files as overhead per file increase load time
+Keep request counts low and files sizes low
+Combine JS files and load syncronousliy 
+Use HTTP2 where possible. Bigger highway
+
+Tip 2: Avoid excessive DNS lookups
+Avoid loading too files from too many different sites.
+Try to hold a local copy of the files needed.
+Some popular libraries may already be in the user cache due to frequent use.
+
+Tip 3: Eliminate inefficient JS
+Too broad
+
+Tip 4: Eliminate unused Javascript
+Only load JS files that is needed for the page.
+Tree shaking to remove files not being used.
+
+Tip 5: CompressJS files
+Takes longer to process at client side however improves download speed which normally has a net benefit
+
+Tip 6: Set Appropriate cahce duration for JS code
+cache-control:max-age=604800
+Check serve assets with an efficient cache policy
+Insure that cache refreshes is done when needed.
+possible work around is providing library versions.
+and use js which has been used before.
+
+-----Mobile Friendly -----
+Use Reponsive web design
+
+Design for mobile index.
+
+make sure content doesn't spill off the viewing port
+Ensure text is large enough to read comfortably
+ensure users can zoom in on content if they want a closer lookingEnsure buttons icons are large enough to be easily recognizable
+
+Usability: 
+Make sure structure is not hard to use.
+Make sure the site is one had operable and interactive component easily clickable.
+Relaying too much on keyboard inputs.
+use mobile friendly test on search.google.com/test/mobility-friendly
+
+Peronalisation for mobile
+less real estate so better use of the space to perosnalized
+use cookies
+
+Utilized mobile input feature:
+pinch and swipe
+location services
+voice input 
+augmented reality
+images searches
+*can use JS to detect avaiable features and only support those.
+
+----Search results Presentations----
+Tip1 : Review your title links
+  Extracted from the <title> tag
+  Don't duplicate titles
+  Don't put dynamic data in titles as google can take a few days to update it search results.
+  use site: page url to check googles 
+
+Tip2 : Include High quality images
+  key images should be at least 1200px wide
+  use site: url and use image
+  use robot.txt file to tell google how to use your images
+
+tip3 : Share rich product data
+  use structure markup
+  for products it is recommended to add the following attributes to structure markup:
+  Title, Description, Images, Ratings, Price, availability
+  use rich structure testing 
+    
+tip4 : Share price drop data
+  Google takes the average price over lifetime to determine if there is a price drop.
+  There must be a price in the structure and must be a range.
+
+tip5 : Indentify products you sell
+
+tip6 : Create a business profile
+
+----Google Merchant center----
+
+Main use to upload product data via merchant feeds
+Use both schema in markup and use google merchant feeds
+
+ tip1 - Ensure all products are indexed
+ tip2 - check if price is correct
+ Tip3 - Minimize price and availability lag
+ Tip4 - Ensure your products are eligible for rich product results
+ Tip5 - Share your product inventory data
+ Tip6 - Sign up for the shopping tab
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
